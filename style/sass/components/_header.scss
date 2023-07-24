@@ -1,0 +1,688 @@
+
+.li-drop {
+    position: relative;
+    padding: 13px 0;
+     > a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after{
+            content: "\f107";
+            font-family: "line Awesome free";
+            font-weight: 900;
+            font-size: 10px;
+            position: relative;
+            margin-inline-start: 3px;
+        }
+    }
+    &:hover{
+        .ul-drop {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .ul-drop{
+        transition: all linear .3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        top: 100%;
+        z-index: 11;
+        opacity: 0;
+        visibility: hidden;
+        min-width: 140px ;
+        border-radius: 7px;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        li {
+            text-align: center;
+            transition: all linear .3s;
+            margin-bottom: 10px;
+        }
+        li:last-of-type{
+            margin-bottom: 0;
+        }
+        a{
+            font-size: 13px;
+            text-transform: capitalize;
+            color: #000 ;
+            text-align: center;
+             display: block;
+            font-weight: 400;
+            transition: all linear .2s;
+            line-height: 1.55;
+            &:hover{
+                color: #000;
+            }
+        }
+    }
+}
+
+
+
+
+ 
+
+.overflowHidden{
+    overflow: hidden !important;
+}
+
+
+
+
+
+  .account-details{
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px 20px;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    min-width: 125px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear .3s;
+    li {
+        line-height: 30px;
+    }
+    a{
+        color: #000;
+        font-weight: 300;
+        text-transform: capitalize;
+        font-size: 14px;
+        &:hover{
+            text-decoration: none;
+        }
+      }
+      a:first-child{
+        margin-bottom: 5px;
+      }
+  }
+
+
+
+.control-section{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    i {
+        font-size: 26px;
+        color: #fff;
+        width: 100%;
+        display: block;
+        transition: all linear .2s;
+        &:hover{
+            color: #000 !important;
+        }
+    }
+}
+.cart , .favourite , .account-text , .openMySearch {
+margin-inline-start: 33px;
+}
+
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+        transition: all linear .2s;
+    }
+    &:hover{
+        i{
+            color: #fff;
+        }
+    }
+}
+.cart div {
+    position: relative;
+}
+
+nav , .control-section{
+    width: 35%;
+}
+
+
+.number{
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 9px;
+    font-weight: 700;
+    position: absolute;
+    top: -5px;
+    left: 15px;
+}
+
+  .account-text{
+    display: flex;
+    align-items: center;
+    }
+
+    .favourite  i , .account-btn i  {
+        transition: all linear .2s;
+    }
+    .account-btn-color {
+        color: #000;
+    }
+
+    .account-text{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+.openMySearch{
+    i{
+        transform: rotate(270deg);
+    }
+}
+.closeSearh-btn{
+    position: absolute;
+    top: 50%;
+    inset-inline-end: 40px;
+    transform: translateY(-50%);
+    
+    i{
+        font-size: 25px ;
+        color: #808080;
+    }
+} 
+.search-holder-input{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding: 0 70px 0 45px;
+    display: flex;
+    align-items: center;
+    form{
+        display: block;
+        width: 100%;
+    }
+}
+.search-holder-input input{
+    width: 100%;
+    color: #000;
+    height: 100%;
+    display: block;
+    padding:0 15px 0 50px;
+    outline: none !important;
+    transition: all linear 0.3s;
+    font-size: 20px;
+    border: none;
+    &::placeholder{
+        font-weight: 300;
+        font-size: 22px;
+        vertical-align: middle;
+        color: #808080;
+    }
+    }
+
+    // html[dir="rtl"]{
+    //     .search-holder-input input{
+    //       padding: 0 15px 0 40px ;  
+    //     }
+    // }
+    
+
+.searchButton{
+    i{
+        font-size: 25px;
+    color: #808080;
+    transform: rotate(270deg);
+    }
+}
+.search-holder-parent{
+    transition: all linear .2s;
+    border-bottom: 1px solid #cbcbcb;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    padding: 0;
+    background-color: #fff;
+    // background-color: rgba($color: #000000, $alpha: 0.2);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-25px);
+     justify-content: center;
+     align-items: flex-start;
+    z-index: 10;
+ }
+ .search-holder{
+    width: 100%;
+    height: 100%;
+     
+ }
+ 
+
+
+// ******************************************************************************
+
+
+
+
+//  header
+html[dir="ltr"]{
+    .search-holder input{
+        padding: 0 60px 0 10px;
+    }
+}
+
+.reset-left {
+    height: 100vh;
+    left: 0;
+    top: 0;
+    clip-path: circle(139.6% at 9% 15%);
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+header{
+    position: fixed;
+    padding: 15px 0px;
+    background-color:rgba($color: #000000, $alpha: 0.2);
+    transition: all linear .3s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+}
+nav{
+    transition: all linear .3s;
+    
+}
+
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    a{
+        display: block;
+        width: 100%;
+        img{
+            transition: all linear .3s;
+        }
+    }
+}
+
+
+
+nav{
+    .nav-ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li:last-child{
+            margin-inline-end: 0;
+        }
+       > li{
+            margin-inline-end: 27px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            > a{
+                font-size: 16px;
+                color: #ffffff;
+                font-weight: 500;
+                text-transform: uppercase;
+                transition: all linear .2s;
+                &:hover{
+                    color: #000;
+                }
+            }
+        }
+    }
+    
+}
+
+.openMySearch{
+    margin-inline-start: 0;
+}
+
+
+
+
+
+
+
+
+.open-nav{
+    inset-inline-start: -100% !important;
+}
+
+.account-text{
+    padding: 10px 0;
+    &:hover{
+        .account-details{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+  }
+
+
+
+
+
+
+@include min-768 {
+    .close-sec{
+        display: none;
+    }
+    .bars {
+        display: none;
+    }
+   
+}
+
+
+
+
+
+@include min-768{
+    .cart , .favourite , .account-text , .openMySearch , .account-btn {
+        &:hover{
+            i {
+                color: #fff;
+            }
+        }
+    }
+    .account-btn{
+        &:hover{
+            color: #000;
+        }
+    }
+  
+    .openSearch-btn{
+        display: none !important;
+    }
+}
+
+
+@media screen and (min-width : 992px) and (max-width:1200px) {
+    .nav-ul > li{
+        margin-inline-end: 12px;
+    }
+    .search-holder-input {
+        width: 220px;
+    }
+
+} 
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .search-holder-input{
+        width: 100%;
+    }
+    
+}
+
+
+@include max-992 {
+  
+    nav, .control-section{
+        width: auto;
+    }
+    nav .nav-ul > li{
+        margin-inline-end: 20px;
+    }
+    .cart, .favourite, .account-text, .openMySearch{
+        margin-inline-start: 25px;
+    }
+    .openMySearch{
+        margin-inline-start: 0;
+    }
+    .logo{
+        position: static;
+        transform: none;
+        left: unset;
+    }
+    
+    .logo a img {
+        width: 135px;
+    }
+    
+    
+    }
+    
+@include max-768 {
+    .account-details{
+        min-width: 110px;
+    }
+    .account-details li{
+        line-height: 32px;
+    }
+    nav .nav-ul > li > a{
+        color: #000;
+    }
+    .control-section i{
+        font-size: 24px;
+    }
+  
+     
+    .li-drop .ul-drop li a:hover {
+        background-color: transparent;
+    }
+
+    .li-drop::after{
+        font-size: 16px;
+    }
+    .li-drop .ul-drop li{
+        padding-bottom: 0;
+        margin-bottom: 12px;
+    }
+
+    .li-drop {
+        flex-direction: column;
+        align-items: flex-start !important;
+        margin-inline-end: 0 !important;
+        padding: 0;
+        &:hover{
+            &::after{
+                color: #000;
+            }
+        }
+        a{
+            display: block;
+            width: 100%;
+            &::after{
+                transition: all linear .3s;
+                inset-inline-end: 0;
+                font-size: 13px;
+            }
+        }
+       .ul-drop{
+        transition: none;
+        background-color: transparent;
+        padding: 0;
+        min-width: auto;
+        width: 100%;
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        padding: 10px 0;
+        display: none;
+        box-shadow: none;
+        transform: none;
+            
+            li a {
+                color: #000;
+                text-align: start;
+                font-size: 13px;
+            }
+        }
+    }
+    .li-drop .ul-drop::after{
+        display: none;
+    }
+    .search-holder-input input{
+        padding: 0 7px 0 50px;
+    }
+    
+  
+    .search-holder-input{
+        padding: 0 20px 0 20px;
+    }
+    .search-holder-parent{
+        height: 60px;
+    }
+    .closeSearh-btn{
+        inset-inline-end : 23px ;
+    }
+    .search-holder-input input{
+        font-size: 16px;
+    }
+    .searchButton i , .closeSearh-btn i {
+        font-size: 20px;
+    }
+    .search-holder-input input::placeholder{
+        font-size: 17px;
+    }
+    .close-sec{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        i{
+            color: #000;
+            font-size: 24px;
+        }
+    }
+    html[dir="ltr"] nav {
+        clip-path: circle(11.2% at 86% 14%);
+        }
+        html[dir="ltr"] .reset-left {
+        clip-path: circle(121.2% at 86% 14%);
+        }
+.nav-ul{
+    flex-direction: column;
+    margin: 55px 0 0 0 !important;
+    align-items: center;
+}
+
+    .service-order{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cart, .bars, .account-text {
+        margin-inline-start: 20px;
+    }
+
+    
+    .search-holder{
+    width: 100%;
+    }
+    
+
+    nav{
+        overflow-y: auto;
+        position: fixed ;
+        top: 0 ;
+        inset-inline-start: 0%;
+        width: 100%;
+        height: 100%;
+        padding:41px 30px 0 30px;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        clip-path: circle(10.9% at 16% 16%);
+        transition: 0.4s;
+        z-index: 200;
+        text-align: center;
+        
+        .nav-ul > li{
+            margin-bottom: 17px;
+            margin-inline-end: 0;
+            width: 100%;
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &:hover{
+                    color: #000;
+                }
+            }
+        }
+    }
+    
+    
+    .nav-ul{
+        margin: 50px 0 0 0 !important;
+    }
+    .favourite{
+        display: none;
+    }
+    
+  
+    
+    .favourite{
+        display: none;
+    }
+    
+    
+    html[dir=ltr] nav .nav-ul > li > a{
+        font-size: 17px;
+    }
+    
+    .openSearch-btn{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+    nav{
+        padding: 20px;
+    }
+    
+    header{
+        padding: 8px 0;
+    }
+    
+.showSearch-box{
+    display: flex !important;
+    }
+    .icon-rotate::after{
+        transform:  rotate(180deg)  !important;
+    }
+    
+    .logo{
+        a img{
+            width: 100px;
+            max-width: 100%;
+        }
+
+    }
+        .header-content{
+        position: relative;
+        width: 100%;
+    }
+  
+
+    
+    
+   
+  
+    
+}
+    

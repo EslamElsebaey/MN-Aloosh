@@ -1,0 +1,56 @@
+
+  
+.logo a  .logo-img-big{
+    width: 130px;
+}
+html[dir="ltr"]{
+  .lang-ancor{
+    font-family: 'Bahij TheSansArabic';
+    font-weight: 600;
+  }
+}
+nav .nav-ul > li > .lang-ancor{
+  text-transform: capitalize ;
+}
+
+.overflow-hidden-body {
+  overflow: hidden;
+}
+
+
+  .showToTop{
+    opacity: 1;
+    visibility: visible;
+  }
+  .translateY-0 {
+    transform: translateY(-30px);
+  }
+
+  .show-search-box{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  .sticky-header{
+    padding: 8px 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+
+
+
+  // body {
+  //   padding-top: 86px;
+  // }
+
+
+
+
+  @include max-768 {
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
