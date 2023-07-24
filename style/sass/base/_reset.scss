@@ -35,7 +35,18 @@ nav .nav-ul > li > .lang-ancor{
 
   .sticky-header{
     padding: 8px 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+   box-shadow: 0 -1px #e3e3e3 inset;
+    .control-section i , nav .nav-ul > li > a{
+      color: #000 !important;
+    }
+    .logo a img{
+      filter: brightness(0) saturate(100%) invert(0%) sepia(0%) hue-rotate(159deg) contrast(105%);
+    }
+    .number{
+      background-color: #000;
+      color: #fff;
+    }
   }
 
 

@@ -131,6 +131,13 @@ html[dir="ltr"]{
 }
 
 
+html[dir="rtl"]{
+    .footer-items-parent .footer-title{
+        font-weight: 700;
+    }
+}
+
+
 
 .copyright{
     .text , p{
